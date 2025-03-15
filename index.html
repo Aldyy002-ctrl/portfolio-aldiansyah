@@ -202,13 +202,7 @@
             <p class="contact-description">
                 Tertarik untuk berkolaborasi atau memiliki pertanyaan? Jangan ragu untuk menghubungi saya melalui formulir di bawah ini.
             </p>
-            <form class="contact-form" action="https://formsubmit.co/kbnmmjj@gmail.com" method="POST">
-                <input type="hidden" name="_subject" value="Pesan Baru dari Website Portofolio">
-                <input type="hidden" name="_captcha" value="true">
-                <input type="hidden" name="_next" value="https://aldyy002-ctrl.github.io/index.html">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_autoresponse" value="Terima kasih telah menghubungi saya">
-                
+            <form class="contact-form" action="mailto:kbnmmjj@gmail.com" method="POST" enctype="text/plain">
                 <div class="form-group">
                     <label for="name" class="form-label">Nama</label>
                     <input type="text" id="name" name="name" class="form-input" placeholder="Masukkan nama Anda" required>
@@ -308,7 +302,11 @@
                         return;
                     }
                     
-                    // Form akan dikirim ke FormSubmit.co
+                    // Format email body
+                    const mailtoBody = `Nama: ${name}%0D%0AEmail: ${email}%0D%0ASubjek: ${subject}%0D%0APesan: ${message}`;
+                    contactForm.action = `mailto:kbnmmjj@gmail.com?subject=${encodeURIComponent(subject)}&body=${mailtoBody}`;
+                    
+                    alert('Pesan Anda akan dikirim melalui aplikasi email default Anda.');
                 });
             }
 
