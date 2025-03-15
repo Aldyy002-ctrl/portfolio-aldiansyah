@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming soon</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Inter', sans-serif;
+    }
+    
+    :root {
+        --primaryBg: #09090B;
+        --secondaryBg: #121215;
+        --primaryText: #FFFFFF;
+        --secondaryText: #99999F;
+        --accentColor: #6C63FF;
+        --borderColor: #1F1F25;
+        --cardBg: #121215;
+        --navBg: rgba(9, 9, 11, 0.5);
+    }
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: var(--primaryBg);
+        color: var(--primaryText);
+        line-height: 1.6;
+    }
+
+    h1 {
+        color: var(--accentColor);
+        margin-bottom: 1rem;
+    }
+
+    p {
+        color: var(--secondaryText);
+        margin-bottom: 2rem;
+    }
+
+    button {
+        background-color: var(--accentColor);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: darken(var(--accentColor), 10%);
+    }
+
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+        button {
+            font-size: 1.2rem;
+        }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="aldi.html" class="nav-logo" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+        <div style="display: flex; align-items: center; justify-content: flex-start;">
+            <div style="background-color: black; border-radius: 8px; padding: 2px 8px; border: 2px solid white; box-shadow: 0 0 5px rgba(255,255,255,0.5);">
+                <span style="font-family: 'Old English Text MT', 'Times New Roman', serif; display: inline-block; background: linear-gradient(45deg, #FF00FF, #00FFFF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-size: 300% 300%; animation: gradient-shift 5s ease infinite; text-shadow: 0 0 2px rgba(0,0,0,0.5); font-size: 24px; font-weight: bold; letter-spacing: 1px;">999</span>
+            </div>
+        </div>
+    </a>
+</nav><br>
+<h1 style="font-size: 3rem;">Coming Soon</h1>
+<p style="font-size: 1.5rem; text-align: center;">Website ini sedang dalam tahap pengembangan. Terima kasih atas kesabaran Anda.</p>
+<button style="font-size: 1.5rem;" onclick="history.back()">Kembali</button>
+</body>
+</html>
