@@ -202,25 +202,48 @@
             <p class="contact-description">
                 Tertarik untuk berkolaborasi atau memiliki pertanyaan? Jangan ragu untuk menghubungi saya melalui formulir di bawah ini.
             </p>
-            <form class="contact-form" action="mailto:kbnmmjj@gmail.com" method="POST" enctype="text/plain">
+            <form class="contact-form" action="https://formsubmit.co/kbnmmjj@gmail.com" method="POST">
+                <!-- FormSubmit Hidden Fields -->
+                <input type="hidden" name="_subject" value="Pesan Baru dari Website">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://aldyy002-ctrl.github.io/portofolio/">
+                
                 <div class="form-group">
                     <label for="name" class="form-label">Nama</label>
                     <input type="text" id="name" name="name" class="form-input" placeholder="Masukkan nama Anda" required>
                 </div>
+                
                 <div class="form-group">
                     <label for="email" class="form-label">Email</label>
                     <input type="email" id="email" name="email" class="form-input" placeholder="Masukkan email Anda" required>
                 </div>
+                
                 <div class="form-group">
                     <label for="subject" class="form-label">Subjek</label>
                     <input type="text" id="subject" name="subject" class="form-input" placeholder="Masukkan subjek pesan" required>
                 </div>
+                
                 <div class="form-group">
                     <label for="message" class="form-label">Pesan</label>
                     <textarea id="message" name="message" class="form-textarea" placeholder="Masukkan pesan Anda" required></textarea>
                 </div>
-                <button type="submit" class="submit-btn">Kirim Pesan</button>
+                
+                <button type="submit" class="submit-btn" id="submit-button">Kirim Pesan</button>
             </form>
+            
+            <div class="loading-spinner" id="loading">
+                <div class="spinner"></div>
+                <p>Mengirim pesan...</p>
+            </div>
+            
+            <div class="status-message status-success" id="success-message">
+                Pesan Anda telah berhasil dikirim! Kami akan menghubungi Anda segera.
+            </div>
+            
+            <div class="status-message status-error" id="error-message">
+                Terjadi kesalahan saat mengirim pesan. Silakan coba lagi nanti.
+            </div>
         </div>
     </section>
     
@@ -281,33 +304,43 @@
                 });
             });
             
-            const contactForm = document.querySelector('.contact-form');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    const name = document.getElementById('name').value;
-                    const email = document.getElementById('email').value;
-                    const subject = document.getElementById('subject').value;
-                    const message = document.getElementById('message').value;
-                    
-                    if (!name || !email || !subject || !message) {
-                        e.preventDefault();
-                        alert('Mohon isi semua kolom yang diperlukan');
-                        return;
-                    }
-                    
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailRegex.test(email)) {
-                        e.preventDefault();
-                        alert('Mohon masukkan alamat email yang valid');
-                        return;
-                    }
-                    
-                    // Format email body untuk mailto
-                    const mailtoBody = `Nama: ${name}%0D%0AEmail: ${email}%0D%0ASubjek: ${subject}%0D%0APesan: ${message}`;
-                    contactForm.action = `mailto:kbnmmjj@gmail.com?subject=${encodeURIComponent(subject)}&body=${mailtoBody}`;
-                    
-                    alert('Pesan Anda akan dikirim melalui aplikasi email default Anda.');
-                });
+            const form = document.querySelector('.contact-form');
+            const submitButton = document.getElementById('submit-button');
+            const loading = document.getElementById('loading');
+            const successMessage = document.getElementById('success-message');
+            const errorMessage = document.getElementById('error-message');
+            
+            form.addEventListener('submit', function(e) {
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const subject = document.getElementById('subject').value.trim();
+                const message = document.getElementById('message').value.trim();
+                
+                if (!name || !email || !subject || !message) {
+                    e.preventDefault();
+                    errorMessage.textContent = 'Mohon isi semua kolom yang diperlukan.';
+                    errorMessage.style.display = 'block';
+                    successMessage.style.display = 'none';
+                    return;
+                }
+                
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    e.preventDefault();
+                    errorMessage.textContent = 'Mohon masukkan alamat email yang valid.';
+                    errorMessage.style.display = 'block';
+                    successMessage.style.display = 'none';
+                    return;
+                }
+                
+                submitButton.disabled = true;
+                loading.style.display = 'block';
+                errorMessage.style.display = 'none';
+                successMessage.style.display = 'none';
+            });
+            
+            if (window.location.search.includes('success=true')) {
+                successMessage.style.display = 'block';
             }
 
             const scrollToTopButton = document.getElementById('scroll-to-top');
