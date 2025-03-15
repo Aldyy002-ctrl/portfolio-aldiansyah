@@ -202,12 +202,12 @@
             <p class="contact-description">
                 Tertarik untuk berkolaborasi atau memiliki pertanyaan? Jangan ragu untuk menghubungi saya melalui formulir di bawah ini.
             </p>
-            <form class="contact-form" action="https://formsubmit.co/kbnmmjj@gmail.com" method="POST">
+            <form class="contact-form" action="https://formsubmit.co/kbnmmjj@gmail.com" method="POST" enctype="multipart/form-data">
                 <!-- FormSubmit Hidden Fields -->
                 <input type="hidden" name="_subject" value="Pesan Baru dari Website">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_next" value="terimakasih.html">
+                <input type="hidden" name="_next" value="https://aldyy002-ctrl.github.io/portofolio/terimakasih.html">
                 
                 <div class="form-group">
                     <label for="name" class="form-label">Nama</label>
@@ -311,6 +311,7 @@
             const errorMessage = document.getElementById('error-message');
             
             form.addEventListener('submit', function(e) {
+                // Hanya validasi, jangan preventDefault() jika validasi berhasil
                 const name = document.getElementById('name').value.trim();
                 const email = document.getElementById('email').value.trim();
                 const subject = document.getElementById('subject').value.trim();
@@ -333,6 +334,7 @@
                     return;
                 }
                 
+                // Jika validasi berhasil, biarkan form terkirim
                 submitButton.disabled = true;
                 loading.style.display = 'block';
                 errorMessage.style.display = 'none';
