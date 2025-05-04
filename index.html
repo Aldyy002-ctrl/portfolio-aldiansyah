@@ -5,20 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Saya</title>
     <link rel="stylesheet" type="text/css" href="1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <nav class="navbar">
         <a href="#Home" class="nav-logo" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
             <div style="display: inline-block; position: relative;">
-                <div style="background-color: black; border-radius: 8px; padding: 2px 8px; border: 2px solid white; box-shadow: 0 0 5px rgba(255,255,255,0.5);">
-                    <span style="font-family: 'Old English Text MT', 'Times New Roman', serif; display: inline-block; background: linear-gradient(45deg, #FF00FF, #00FFFF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-size: 300% 300%; animation: gradient-shift 5s ease infinite; text-shadow: 0 0 2px rgba(0,0,0,0.5); font-size: 24px; font-weight: bold; letter-spacing: 1px;">999</span>
+                <div class="logo-container">
+                    <span class="logo-text">999</span>
                 </div>
             </div>
         </a>
         <div class="nav-links">
             <a href="#projects" class="nav-link">Proyek</a>
             <a href="#skills" class="nav-link">Keahlian</a>
-            <a href="#contact" class="nav-link">Sertifikat</a>
+            <a href="#testimonials" class="nav-link">Testimoni</a>
+            <a href="#certificates" class="nav-link">Sertifikat</a>
+            <a href="#contact" class="nav-link">Kontak</a>
         </div>
         <div class="menu-toggle" id="mobile-menu">
             <span></span>
@@ -36,51 +39,56 @@
             <a href="#Home" class="mobile-nav-link">Home</a>
             <a href="#projects" class="mobile-nav-link">Proyek</a>
             <a href="#skills" class="mobile-nav-link">Keahlian</a>
+            <a href="#testimonials" class="mobile-nav-link">Testimoni</a>
+            <a href="#certificates" class="mobile-nav-link">Sertifikat</a>
+            <a href="#contact" class="mobile-nav-link">Kontak</a>
         </div>
     </div>
     
     <section class="hero">
-        <img src="Gambar WhatsApp 2025-02-17 pukul 15.09.17_9f06c3bf.jpg" alt="Foto Profil" class="hero-image" id="profile-image">
-        <h1 class="hero-title">Muhammad AldiAnsyah</h1>
-        <h2 class="hero-subtitle">Siswa</h2>
-        <p class="hero-description">
-            Saya adalah seorang pengembang web yang berpengalaman dalam membangun aplikasi modern dan responsif. Dengan keahlian dalam JavaScript, React, dan Node.js, saya dapat membuat solusi digital yang sesuai dengan kebutuhan Anda.
-        </p>
-        <div class="social-links">
-            <a href="https://api.whatsapp.com/send/?phone=%2B6283152113679&text&type=phone_number&app_absent=0" class="social-icon" title="WhatsApp">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.967 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                    <path d="M20.519 3.482c-4.557-4.557-11.934-4.557-16.49 0-4.341 4.342-4.557 11.863-.368 16.466L2 24.001l4.16-1.626c1.52.79 3.218 1.188 4.912 1.188 7.022 0 12.93-5.717 12.93-12.736 0-3.37-1.267-6.679-3.483-8.971z"/>
-                </svg>
-            </a>
-            <a href="https://github.com/Aldyy002-ctrl" class="social-icon" title="GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-            </a>
-            <a href="https://www.instagram.com/xydt_dyy/" class="social-icon" title="Instagram">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-            </a>
-            <a href="https://www.tiktok.com/@katateki_999" class="social-icon" title="TikTok">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 10.5c-2.5 0-5.5-1.5-6.5-2v9.5a7 7 0 1 1-7-7v4a3 3 0 1 0 3 3V2h4c0 2.5 1.5 5.5 6.5 6.5V10.5z"></path>
-                </svg>
-            </a>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text-container">
+                    <h1 class="hero-title">Muhammad AldiAnsyah</h1>
+                    <h2 class="hero-subtitle">Web Developer & Siswa</h2>
+                    <p class="hero-description">
+                        Saya adalah seorang pengembang web yang berpengalaman dalam membangun aplikasi modern dan responsif. Dengan keahlian dalam JavaScript, React, dan Node.js, saya dapat membuat solusi digital yang sesuai dengan kebutuhan Anda.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://api.whatsapp.com/send/?phone=%2B6283152113679&text&type=phone_number&app_absent=0" class="social-icon" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://github.com/Aldyy002-ctrl" class="social-icon" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/xydt_dyy/" class="social-icon" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@katateki_999" class="social-icon" title="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                    <a href="#contact" class="hero-btn">Hubungi Saya</a>
+                </div>
+                <div class="hero-image-container">
+                    <img src="Gambar WhatsApp 2025-02-17 pukul 15.09.17_9f06c3bf.jpg" alt="Foto Profil" class="hero-image" id="profile-image">
+                </div>
+            </div>
+            <div class="hero-scroll-indicator">
+                <div class="mouse-icon">
+                    <div class="mouse-wheel"></div>
+                </div>
+                <p>Scroll untuk melihat lebih</p>
+            </div>
         </div>
-        <a href="https://www.instagram.com/xydt_dyy/" class="hero-btn">Contact Me</a>
     </section>
     
     <section id="projects" class="projects">
         <h2 class="section-title">Proyek Saya</h2>
-        
-    
+        <div class="projects-grid">
             <!-- Proyek Login Pengguna -->
-            <div class="project-card" style="width: 50%; height: 50%;">
-                <img src="image.png" alt="Sistem Manajemen Akun" class="project-image" style="object-fit: cover; width: 100%; height: 100%;">
+            <div class="project-card">
+                <img src="image.png" alt="Sistem Manajemen Akun" class="project-image">
                 <div class="project-content">
                     <h3 class="project-title">Sistem Login Perpustakaan</h3>
                     <p class="project-description">
@@ -97,6 +105,25 @@
                     </div>
                 </div>
             </div>
+            <!-- Proyek Portfolio -->
+            <div class="project-card">
+                <img src="Gambar WhatsApp 2025-03-13 pukul 05.08.58_b5724759.jpg" alt="Portfolio Website" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Website Portofolio Pribadi</h3>
+                    <p class="project-description">
+                        Website portfolio responsif yang menampilkan proyek dan keahlian secara profesional. Dibangun dengan HTML, CSS, dan JavaScript.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">🔗 Demo</a>
+                        <a href="https://github.com/Aldyy002-ctrl/portofolio" class="project-link">👨‍💻 Kode</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     
@@ -108,18 +135,33 @@
                     <h3 class="category-title">Frontend</h3>
                     <div class="skills-list">
                         <div class="skill-item">
-                            <span class="skill-icon">✅</span>
+                            <span class="skill-icon"><i class="fab fa-html5"></i></span>
                             <span>HTML</span>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" style="width: 90%"></div>
+                            </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-icon">✅</span>
+                            <span class="skill-icon"><i class="fab fa-css3-alt"></i></span>
                             <span>CSS</span>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" style="width: 85%"></div>
+                            </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-icon">✅</span>
+                            <span class="skill-icon"><i class="fab fa-js"></i></span>
                             <span>JavaScript</span>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" style="width: 75%"></div>
+                            </div>
                         </div>
-                        
+                        <div class="skill-item">
+                            <span class="skill-icon"><i class="fab fa-python"></i></span>
+                            <span>Python</span>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" style="width: 70%"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -127,12 +169,18 @@
                     <h3 class="category-title">Backend</h3>
                     <div class="skills-list">
                         <div class="skill-item">
-                            <span class="skill-icon">✅</span>
-                            <span>PHP</span>
+                            <span class="skill-icon"><i class="fab fa-node-js"></i></span>
+                            <span>Node.js</span>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" style="width: 65%"></div>
+                            </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-icon">✅</span>
+                            <span class="skill-icon"><i class="fas fa-database"></i></span>
                             <span>MySQL</span>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" style="width: 80%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -141,30 +189,103 @@
                     <h3 class="category-title">Tools & Lainnya</h3>
                     <div class="skills-list">
                         <div class="skill-item">
-                            <span class="skill-icon">✅</span>
+                            <span class="skill-icon"><i class="fab fa-git-alt"></i></span>
                             <span>Git</span>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" style="width: 75%"></div>
+                            </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-icon">✅</span>
+                            <span class="skill-icon"><i class="fab fa-figma"></i></span>
                             <span>Figma</span>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" style="width: 60%"></div>
+                            </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-icon">✅</span>
+                            <span class="skill-icon"><i class="fas fa-code"></i></span>
                             <span>VS Code</span>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" style="width: 85%"></div>
+                            </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-icon">✅</span>
-                            <span>ChatGPT</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-icon">✅</span>
-                            <span>Claude</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-icon">✅</span>
-                            <span>PDF</span>
+                            <span class="skill-icon"><i class="fas fa-robot"></i></span>
+                            <span>AI Tools</span>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" style="width: 90%"></div>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2 class="section-title">Testimoni</h2>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        Muhammad Aldi sangat profesional dan terampil dalam pengembangan website. Ia menyelesaikan proyek kami tepat waktu dengan hasil yang luar biasa.
+                    </p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-author-name">Budi Santoso</div>
+                    <div class="testimonial-author-title">CEO, PT Teknologi Indonesia</div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        Keterampilan Aldi dalam merancang UI/UX sangat mengesankan. Website yang dia buat untuk bisnis kami mendapat banyak pujian dari pelanggan.
+                    </p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-author-name">Siti Rahayu</div>
+                    <div class="testimonial-author-title">Pemilik, Toko Online Sejahtera</div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        Bekerja dengan Aldi adalah pengalaman yang menyenangkan. Dia sangat komunikatif dan selalu terbuka untuk saran dalam proses pengembangan.
+                    </p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-author-name">Ahmad Fauzi</div>
+                    <div class="testimonial-author-title">Manajer Proyek, Digital Kreasi</div>
                 </div>
             </div>
         </div>
@@ -173,17 +294,17 @@
     <section id="certificates" class="certificates">
         <h2 class="section-title">Sertifikat Saya</h2>
         <div class="certificates-container">
-            <div class="certificate-card">
+            <div class="certificate-card animate-on-scroll">
                 <h3 class="certificate-title">[Students] CSR Kalimantan Timur INFORMATIKA - SMA/SMK</h3>
                 <p class="certificate-description">Diterbitkan oleh LearningX pada 21 Mei 2024.</p>
                 <a href="sertivikat informatika.pdf" target="_blank" class="certificate-link">Lihat Sertifikat</a>
             </div>
-            <div class="certificate-card">
+            <div class="certificate-card animate-on-scroll">
                 <h3 class="certificate-title">[Students] INFORMATIKA - SMA/SMK KELAS X Semester 1</h3>
                 <p class="certificate-description">Diterbitkan oleh LearningX pada 20 Januari 2024.</p>
                 <a href="sertivikat informatika 2.pdf" target="_blank" class="certificate-link">Lihat Sertifikat</a>
             </div>
-            <div class="certificate-card">
+            <div class="certificate-card animate-on-scroll">
                 <h3 class="certificate-title">AWARD of COURSE COMPLETION
                     Java Fundamentals</h3>
                 <p class="certificate-description">Diterbitkan oleh ORACLE Academy pada 21 November 2023.</p>
@@ -191,14 +312,89 @@
             </div>
         </div>
     </section>
-    <br>    
     
-    
+    <section id="contact" class="contact">
+        <h2 class="section-title">Hubungi Saya</h2>
+        <div class="contact-container">
+            <p class="contact-description">
+                Tertarik untuk berkolaborasi atau memiliki pertanyaan? Jangan ragu untuk menghubungi saya melalui formulir di bawah ini.
+            </p>
+            <form class="contact-form" action="https://formsubmit.co/kbnmmjj@gmail.com" method="POST" enctype="multipart/form-data">
+                <!-- FormSubmit Hidden Fields -->
+                <input type="hidden" name="_subject" value="Pesan Baru dari Website">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://aldyy002-ctrl.github.io/portofolio/terimakasih.html">
+                
+                <div class="form-group">
+                    <label for="name" class="form-label">Nama</label>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="Masukkan nama Anda" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="Masukkan email Anda" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject" class="form-label">Subjek</label>
+                    <input type="text" id="subject" name="subject" class="form-input" placeholder="Masukkan subjek pesan" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message" class="form-label">Pesan</label>
+                    <textarea id="message" name="message" class="form-textarea" placeholder="Masukkan pesan Anda" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn" id="submit-button">Kirim Pesan</button>
+            </form>
+            
+            <div class="loading-spinner" id="loading">
+                <div class="spinner"></div>
+                <p>Mengirim pesan...</p>
+            </div>
+            
+            <div class="status-message status-success" id="success-message">
+                Pesan Anda telah berhasil dikirim! Kami akan menghubungi Anda segera.
+            </div>
+            
+            <div class="status-message status-error" id="error-message">
+                Terjadi kesalahan saat mengirim pesan. Silakan coba lagi nanti.
+            </div>
+        </div>
+    </section>
     
     <footer class="footer">
-        <p class="footer-text">
-            © 2025 <span class="footer-link">Muhammad AldiAnsyah</span>. Semua Hak Dilindungi.
-        </p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-text">999</span>
+                <p>Muhammad AldiAnsyah</p>
+            </div>
+            <div class="footer-links">
+                <h3>Tautan</h3>
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#projects">Proyek</a></li>
+                    <li><a href="#skills">Keahlian</a></li>
+                    <li><a href="#testimonials">Testimoni</a></li>
+                    <li><a href="#certificates">Sertifikat</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Kontak</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> kbnmmjj@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +6283152113679</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Indonesia</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-text">
+                © 2025 <span class="footer-link">Muhammad AldiAnsyah</span>. Semua Hak Dilindungi.
+            </p>
+        </div>
     </footer>
 
     <script>
@@ -208,6 +404,7 @@
             const closeMenu = document.getElementById('close-menu');
             const navLinks = document.querySelectorAll('.mobile-nav-link, .nav-link');
             
+            // Mobile menu handling
             menuToggle.addEventListener('click', () => {
                 if (mobileNav.classList.contains('active')) {
                     mobileNav.classList.remove('active');
@@ -223,6 +420,7 @@
                 document.body.style.overflow = ''; // Mengembalikan scrolling
             });
             
+            // Smooth scrolling for nav links
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -252,6 +450,7 @@
                 });
             });
             
+            // Form validation
             const form = document.querySelector('.contact-form');
             const submitButton = document.getElementById('submit-button');
             const loading = document.getElementById('loading');
@@ -289,10 +488,12 @@
                 successMessage.style.display = 'none';
             });
             
+            // Check for success message in URL
             if (window.location.search.includes('success=true')) {
                 successMessage.style.display = 'block';
             }
 
+            // Scroll to top button
             const scrollToTopButton = document.getElementById('scroll-to-top');
 
             window.addEventListener('scroll', function() {
@@ -307,6 +508,12 @@
                         }
                     }, 300);
                 }
+                
+                // Cek untuk animasi pada scroll
+                checkScroll();
+                
+                // Update navbar style on scroll
+                updateNavbarStyle();
             });
 
             scrollToTopButton.addEventListener('click', function() {
@@ -316,28 +523,150 @@
                 });
             });
 
+            // Modal image functionality
             const profileImage = document.getElementById('profile-image');
             const modal = document.getElementById('image-modal');
             const modalImage = document.getElementById('modal-image');
             const closeModal = document.querySelector('.close-modal');
 
-            // Ketika gambar profil diklik, buka modal
-            profileImage.onclick = function() {
-                modal.style.display = "flex"; // Tampilkan modal
-                modalImage.src = this.src; // Set gambar modal ke gambar profil
-            }
+            if (profileImage && modal && modalImage && closeModal) {
+                // Ketika gambar profil diklik, buka modal
+                profileImage.onclick = function() {
+                    modal.style.display = "flex"; // Tampilkan modal
+                    modalImage.src = this.src; // Set gambar modal ke gambar profil
+                }
 
-            // Ketika tombol close diklik, tutup modal
-            closeModal.onclick = function() {
-                modal.style.display = "none"; // Sembunyikan modal
-            }
-
-            // Tutup modal jika pengguna mengklik di luar gambar
-            window.onclick = function(event) {
-                if (event.target == modal) {
+                // Ketika tombol close diklik, tutup modal
+                closeModal.onclick = function() {
                     modal.style.display = "none"; // Sembunyikan modal
                 }
+
+                // Tutup modal jika pengguna mengklik di luar gambar
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none"; // Sembunyikan modal
+                    }
+                }
             }
+
+            // Animasi pada scroll
+            function checkScroll() {
+                const elements = document.querySelectorAll('.animate-on-scroll');
+                const windowHeight = window.innerHeight;
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect();
+                    
+                    // Jika elemen terlihat di viewport
+                    if(elementPosition.top < windowHeight * 0.85) {
+                        element.classList.add('visible');
+                    }
+                });
+            }
+            
+            // Tambahkan kelas untuk animasi pada elemen
+            document.querySelectorAll('.project-card, .skills-category, .testimonial-card, .certificate-card, .hero-content, .section-title').forEach(item => {
+                item.classList.add('animate-on-scroll');
+            });
+            
+            // Jalankan saat halaman dimuat
+            checkScroll();
+
+            // Animasi progress bar skills
+            function animateSkillBars() {
+                const skillBars = document.querySelectorAll('.skill-progress-bar');
+                
+                skillBars.forEach(bar => {
+                    const width = bar.style.width;
+                    bar.style.width = '0';
+                    
+                    setTimeout(() => {
+                        bar.style.width = width;
+                    }, 500);
+                });
+            }
+            
+            // Animasi untuk skill bars ketika section menjadi visible
+            const skillsSection = document.getElementById('skills');
+            if (skillsSection) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            setTimeout(animateSkillBars, 500);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.2 });
+                
+                observer.observe(skillsSection);
+            } else {
+                // Fallback jika IntersectionObserver tidak berjalan
+                setTimeout(animateSkillBars, 1000);
+            }
+            
+            // Update navbar style on scroll
+            function updateNavbarStyle() {
+                const navbar = document.querySelector('.navbar');
+                if (!navbar) return;
+                
+                if (window.scrollY > 50) {
+                    navbar.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.3)';
+                    navbar.style.background = 'rgba(9, 9, 11, 0.95)';
+                    navbar.style.padding = '1rem 6rem';
+                } else {
+                    navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.2)';
+                    navbar.style.background = 'rgba(9, 9, 11, 0.9)';
+                    navbar.style.padding = '1.5rem 6rem';
+                }
+                
+                // Adjust padding for responsive design
+                if (window.innerWidth <= 992) {
+                    navbar.style.padding = window.scrollY > 50 ? '1rem 3rem' : '1.5rem 3rem';
+                }
+                
+                if (window.innerWidth <= 768) {
+                    navbar.style.padding = window.scrollY > 50 ? '1rem 2rem' : '1.5rem 2rem';
+                }
+                
+                if (window.innerWidth <= 576) {
+                    navbar.style.padding = window.scrollY > 50 ? '0.75rem 1.5rem' : '1rem 1.5rem';
+                }
+            }
+            
+            // Run updateNavbarStyle on load
+            updateNavbarStyle();
+            
+            // Handle window resize events
+            window.addEventListener('resize', updateNavbarStyle);
+            
+            // Add active class to nav link based on scroll position
+            function updateActiveNavLink() {
+                const sections = document.querySelectorAll('section');
+                const navLinks = document.querySelectorAll('.nav-link');
+                
+                let currentSection = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                    
+                    if (window.scrollY >= (sectionTop - navbarHeight - 100)) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${currentSection}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            // Run updateActiveNavLink on scroll
+            window.addEventListener('scroll', updateActiveNavLink);
+            updateActiveNavLink();
         });
     </script>
 
